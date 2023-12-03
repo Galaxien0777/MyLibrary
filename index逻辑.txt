@@ -1,0 +1,48 @@
+index.php
+    加载 Base.class.php
+
+Base.class.php
+    self::pageInit();
+    self::dirInit();
+    self::autoLoad();
+    self::readConf();
+        加载 ./Base/Conf.php
+    self::getRequest();
+    self::distributeRequest();
+        加载 \Common\Controller\Login
+
+\Common\Controller\LoginController.class.php
+    index()
+    checkLogin()
+    $this->smarty->display()
+        加载 ./Common/View/login.html
+        触发 src="?p=Common&c=Login&a=showVerify
+
+index.php
+    加载 Base.class.php
+
+Base.class.php
+    self::pageInit();
+    self::dirInit();
+    self::autoLoad();
+    self::readConf();
+        加载 ./Base/Conf.php
+    self::getRequest();
+    self::distributeRequest();
+        加载 \Common\Controller\Login
+
+
+\Common\Controller\LoginController.class.php
+    showVerify()
+    new Verify;
+
+\Tool\Verify.class.php
+    $this->width = $width;
+    $this->height = $height;
+    $this->picInit();
+    $this->createPic();
+    $this->writeCode();
+    $this->writeNoise();
+    $this->outPutPic();
+
+
